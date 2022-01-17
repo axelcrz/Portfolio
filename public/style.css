@@ -17,7 +17,7 @@ h2, h3 {
 li {
   list-style-type: none;
 }
-/* ************************ HEADER *********************** */
+
 .navbar {
   background-color: #FAFAFA;
   opacity: 0.9;
@@ -93,7 +93,7 @@ header .button:hover a {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
-/* ********************** LANGAGES *********************** */
+
 #langages {
   padding: 80px 80px 80px 50px;
   margin: 20px 0 0 6%;
@@ -107,7 +107,7 @@ header .button:hover a {
   padding: 10px 0 4px 0;
   letter-spacing: 0.1em;
 }
-/* ********************** FORMATION ********************* */
+
 #formation {
   position: relative;
   top: -200px;
@@ -152,7 +152,7 @@ header .button:hover a {
 .data-span {
   font-size: 1.8em;
 }
-/* ********************** PARCOURS *************************** */
+
 #parcours {
   max-width: 800px;
   margin: 640px auto 180px auto;
@@ -212,7 +212,7 @@ header .button:hover a {
   padding-right: 0;
 }
 
-/* ************************* PORTFOLIO ************************* */
+
 #portfolio {
   margin: 100px 2% 0 2%;
   padding: 40px 10px 60px 40px;
@@ -333,7 +333,7 @@ header .button:hover a {
     transform: translateX(0) translateY(0);
   }
 }
-/* ********************* OTHER *********************** */
+
 #other-skills {
   margin-top: 80px;
   padding: 50px 100px 100px 100px;
@@ -354,7 +354,7 @@ header .button:hover a {
   font-size: 2em;
   text-transform: uppercase;
 }
-/* ******************** Passe-Temps ******************** */
+
 #hobbies {
   padding: 250px 50px 100px 50px;
   margin: -300px 0px -90px 0px;
@@ -410,7 +410,7 @@ header .button:hover a {
   transform: rotateY(180deg);
 }
 
-/* ********************** FOOTER ************************ */
+
 footer {
   background: url(./media/footer.jpg) 50% 0% no-repeat fixed;
   background-size: cover;
@@ -531,7 +531,7 @@ footer p {
   font-size: 0.9em;
   letter-spacing: 0.3em;
 }
-/* ********************** MEDIA QUERIES *********************** */
+
 @media screen and (max-width: 900px) {
   .infos h5, .typed {
     font-size: 0.9em;
