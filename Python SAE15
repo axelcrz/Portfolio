@@ -1,0 +1,73 @@
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+from pylab import *
+
+from collections import *
+
+
+
+fichier=open("C:/Users/croze/OneDrive/Documents/SAE15/SAE155.txt", "r") #ouvrir le fichier 
+
+text=fichier.readlines() #lire fichier
+
+nblines = len(text)
+
+ipsr='' #ipsource
+
+ipde='' #ipdestination
+
+flag='' #flag
+
+
+
+for ligne in text:
+
+    if not ligne.startswith('\t'):  #\t dans les données ne pas executer le prog
+
+        tabl=ligne.split(" ") #divise une chaîne en une liste basée sur un délimiteur
+
+        long=len(tabl)
+
+
+
+        for i in range(long): #permet une action a un certain nombe de fois
+
+            if tabl[2].startswith('ns') or tabl[4].startswith('ns') or 'OK' in tabl[long-1] or 'HTTP' in tabl[long-1]:
+
+                break #quiter boucle 
+
+            else:
+
+                ipsr=ipsr+tabl[2][0:21]+';' #permet de créer un tableau 
+
+                ipde=ipde+tabl[4][0:21]+';'
+
+                if tabl[5]=='Flags': 
+
+                    flag=flag+tabl[6]+';' #ajoutez la variable dans la case correspondante
+
+                else:
+
+                    flag=flag+'none;' #sinon flag n'ajoute aucune valeurs
+
+                break 
+
+        
+
+                
+
+                
+
+fichier.close() #modifie le fichier en fichier fermé
+
+
+
+fichier=open("C:/Users/croze/OneDrive/Documents/SAE15/Sae15.txt", "w") #ouvrir le fichier en mode excel
+
+fichier.write("Liste ip sources :;"+ipsr+"\nListe ip destination"+ipde+"\nListe des flags :;"+flag) #placer les categorie et les variable mit dans le prog
+
+fichier.close()
+
+
